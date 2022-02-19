@@ -73,24 +73,24 @@ class DogCardAdapter(
         // TODO: Get the data at the current position
         val item = dogsData[position]
         // TODO: Set the image resource for the current dog
-        holder.dogPicture!!.setImageResource(item.imageResourceId)
-        holder.gridDogPicture!!.setImageResource(item.imageResourceId)
+        holder.dogPicture?.setImageResource(item.imageResourceId)
+        holder.gridDogPicture?.setImageResource(item.imageResourceId)
 
 
         // TODO: Set the text for the current dog's name
-        holder.dogName!!.text = item.name
-        holder.gridDogName!!.text = item.name
+        holder.dogName?.text = item.name
+        holder.gridDogName?.text = item.name
 
         val resources = context?.resources
         // TODO: Set the text for the current dog's age
-        holder.dogAge!!.text = resources!!.getString(R.string.dog_age , item.age)
-        holder.gridDogAge!!.text = resources!!.getString(R.string.dog_age , item.age)
+        holder.dogAge?.text = resources?.getString(R.string.dog_age , item.age)
+        holder.gridDogAge?.text = resources?.getString(R.string.dog_age , item.age)
 
         // TODO: Set the text for the current dog's hobbies by passing the hobbies to the
         //  R.string.dog_hobbies string constant.
         //  Passing an argument to the string resource looks like:
         //  resources?.getString(R.string.dog_hobbies, dog.hobbies)
-        holder.dogHobbies!!.text = resources!!.getString(R.string.dog_hobbies , item.hobbies)
-        holder.gridDogHobbies!!.text = resources!!.getString(R.string.dog_hobbies , item.hobbies)
+        holder.dogHobbies?.text = resources?.getString(R.string.dog_hobbies , item.hobbies)
+        holder.gridDogHobbies?.text = resources?.getString(R.string.dog_hobbies , item.hobbies)
     }
 }
