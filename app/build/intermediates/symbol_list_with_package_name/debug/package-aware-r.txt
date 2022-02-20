@@ -1881,11 +1881,7 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
-id grid_age
 id grid_btn
-id grid_hobbies
-id grid_image_view
-id grid_name
 id grid_recycler_view
 id group_divider
 id grouping

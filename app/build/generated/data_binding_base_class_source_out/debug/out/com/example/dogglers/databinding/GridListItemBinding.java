@@ -20,24 +20,24 @@ public final class GridListItemBinding implements ViewBinding {
   private final MaterialCardView rootView;
 
   @NonNull
-  public final TextView gridAge;
+  public final TextView age;
 
   @NonNull
-  public final TextView gridHobbies;
+  public final TextView hobbies;
 
   @NonNull
-  public final ImageView gridImageView;
+  public final ImageView imageView;
 
   @NonNull
-  public final TextView gridName;
+  public final TextView name;
 
-  private GridListItemBinding(@NonNull MaterialCardView rootView, @NonNull TextView gridAge,
-      @NonNull TextView gridHobbies, @NonNull ImageView gridImageView, @NonNull TextView gridName) {
+  private GridListItemBinding(@NonNull MaterialCardView rootView, @NonNull TextView age,
+      @NonNull TextView hobbies, @NonNull ImageView imageView, @NonNull TextView name) {
     this.rootView = rootView;
-    this.gridAge = gridAge;
-    this.gridHobbies = gridHobbies;
-    this.gridImageView = gridImageView;
-    this.gridName = gridName;
+    this.age = age;
+    this.hobbies = hobbies;
+    this.imageView = imageView;
+    this.name = name;
   }
 
   @Override
@@ -67,32 +67,31 @@ public final class GridListItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.grid_age;
-      TextView gridAge = rootView.findViewById(id);
-      if (gridAge == null) {
+      id = R.id.age;
+      TextView age = rootView.findViewById(id);
+      if (age == null) {
         break missingId;
       }
 
-      id = R.id.grid_hobbies;
-      TextView gridHobbies = rootView.findViewById(id);
-      if (gridHobbies == null) {
+      id = R.id.hobbies;
+      TextView hobbies = rootView.findViewById(id);
+      if (hobbies == null) {
         break missingId;
       }
 
-      id = R.id.grid_image_view;
-      ImageView gridImageView = rootView.findViewById(id);
-      if (gridImageView == null) {
+      id = R.id.image_view;
+      ImageView imageView = rootView.findViewById(id);
+      if (imageView == null) {
         break missingId;
       }
 
-      id = R.id.grid_name;
-      TextView gridName = rootView.findViewById(id);
-      if (gridName == null) {
+      id = R.id.name;
+      TextView name = rootView.findViewById(id);
+      if (name == null) {
         break missingId;
       }
 
-      return new GridListItemBinding((MaterialCardView) rootView, gridAge, gridHobbies,
-          gridImageView, gridName);
+      return new GridListItemBinding((MaterialCardView) rootView, age, hobbies, imageView, name);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
